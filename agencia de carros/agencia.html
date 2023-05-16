@@ -1,0 +1,122 @@
+<html>
+<head>
+  <title>CV Bank</title>
+  <style>
+    .header {
+      background-color: #ffffff;
+      color: rgb(255, 255, 255);
+      padding: 20px;
+    }
+    .logo {
+      font-size: 25px;
+    }
+    .menu {
+      float: right;
+    }
+    .menu a {
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .carousel {
+        width: 100%;
+        height: 400px;
+        position: relative;
+        overflow: hidden;
+      }
+      .carousel img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+      }
+      .carousel img.active {
+        opacity: 1;
+      }
+      .carousel .prev,
+      .carousel .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50px;
+        height: 50px;
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        font-size: 24px;
+        text-align: center;
+        line-height: 50px;
+        cursor: pointer;
+      }
+      .carousel .prev {
+        left: 10px;
+      }
+      .carousel .next {
+        right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+        <div class="logo"></div>
+        <img src="lotus.png" 
+        height="250"
+        width="150">
+        <div class="menu">
+          <h3>
+          <a href="carros.html">Carros Novos |</a>
+          <a href="carrosantigos.html">Carros Usados |</a>
+          <a href="contato.html">Contato |</a>
+          <a href="cadastro.html">Cadastro</a>
+          </h3>
+        </div>
+        <div style="background: linear-gradient(to right, blue, black,blue); height: 5px"></div>
+       </div>
+       <h1>VOLKSWAGEN JETTA
+        1.4 250 TSI TOTAL FLEX R-LINE TIPTRONIC</h1>
+        <h1>OFERTA DO DIA!!!!!!</h1>
+        <H3>R$ 139.900</h3>
+  <div class="carousel">
+    <img src="jetta.jpg" alt="Imagem 1" class="active">
+    <img src="jetta2.jpg" alt="Imagem 2">
+    <img src="jetta3.jpg" alt="Imagem 3">
+    <img src="jetta4.jpg" alt="Imagem 4">
+    <div class="prev">&lt;</div>
+    <div class="next">&gt;</div>
+  </div>
+  <script>
+    const images = document.querySelectorAll('.carousel img');
+    const prevButton = document.querySelector('.carousel .prev');
+    const nextButton = document.querySelector('.carousel .next');
+    let index = 0;
+    const changeImage = () => {
+      images.forEach(img => img.classList.remove('active'));
+      images[index].classList.add('active');
+    };
+    const prevImage = () => {
+      index--;
+      if (index < 0) {
+        index = images.length - 1;
+      }
+      changeImage();
+    };
+    const nextImage = () => {
+      index++;
+      if (index >= images.length) {
+        index = 0;
+      }
+      changeImage();
+    };
+    prevButton.addEventListener('click', prevImage);
+    nextButton.addEventListener('click', nextImage);
+    setInterval(nextImage, 5000);
+  </script>
+</head>
+
+<body>
+
+
+</body>
+</html>

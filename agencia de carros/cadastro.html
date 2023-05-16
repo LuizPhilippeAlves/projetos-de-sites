@@ -1,0 +1,76 @@
+
+<html>
+  <head>
+    <style>
+        .header {
+          background-color: #ffffff;
+          color: rgb(255, 255, 255);
+          padding: 20px;
+        }
+        .logo {
+          font-size: 25px;
+        }
+        .menu {
+          float: right;
+        }
+        .menu a {
+          color: rgb(0, 0, 0);
+          text-decoration: none;
+          margin: 0 10px;
+        }
+        </style>
+      </head>
+      <body>
+        <div class="header">
+            <div class="logo"></div>
+            <img src="lotus.png" 
+            height="250"
+            width="250">
+            <div class="menu">
+                <h3>
+                <a href="carros.html">Carros Novos |</a>
+                <a href="carrosantigos.html">Carros Usados |</a>
+                <a href="contato.html">Contato |</a>
+                <a href="agencia.html">Ínicio</a>
+                </h3>
+              </div>
+            <div style="background: linear-gradient(to right, blue, black,blue); height: 5px"></div>
+           </div>
+           <form>
+            <b>Nome Completo:</b>
+            <input type="text" name="nome" placeholder="Digite seu nome:"><br><br>
+            <b>Email:</b>
+            <input type="text" email="email" placeholder="Digite seu email:"><br><br>
+            <b>Data de Nascimento:</b> <input type="date" name="nascimento" min="1950-01-01" max="2020-12-31" placeholder="escolha sua data de nascimento">
+            <br><br/>
+            <b>Número de Celular:</b>
+             <input type="number" name="celular" placeholder="(DDD)#####-####">
+             <br><br/>
+            <b>Senha:</b> <input type="password " name="senha" placeholder="Digite sua senha:"> 
+            <br/><br>
+            <b>Confirmação de Senha:</b>
+             <input type="password" name="confirmação" placeholder="Confirme sua senha:"> 
+             <br><br/>
+             <form>
+                <b>Selecione seu Estado:</b>
+                <select name="estado">
+                    <option value="MG">Minas Gerais</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="BA">Bahia</option>
+                </select>
+             </form>
+             <b>Selecione sua Renda Mensal:</b>
+             <select name="rendas">
+                <option value="0 até 1000">0 até 1000</option>
+                <option value="1000 até 2000">1000 até 2000</option>
+                <option value="2000 até 3000">2000 até 3000</option>
+                <option value="acima de 3000">acima de 3000</option>
+             </select>
+            <h3>Deixe seu comentário:</h3>
+            <textarea cols="30" rows="5"></textarea>
+            <input type="submit" value="Enviar">
+        </form>
+        </p>
+  </body>
+</html>
