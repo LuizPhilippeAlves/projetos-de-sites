@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <title>CV bank </title> <style>
+            h1{color:rgb(0, 0, 0);}</style>
+     <style type="text/css">
+        html {
+            background-color: rgb(255, 255, 255);
+            width: px;
+            border: 1px solid rgb(11, 10, 10)
+        }
+        
+        h1 {
+            color:rgb(0, 0, 0);
+            font-style:small-caps;
+        }
+        b {
+            color: rgb(0, 0, 0);
+            font-style:italic;
+            font:italic bold 15px arial, sans-serif;
+        }
+        #header {
+            background-color: #fbfafa;
+            color: #0a0a0a;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+          }
+          #header:hover {
+            background-color: #b17171;
+          }
+          .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(145, 45, 45, 0.2);
+            z-index: 1;
+          }
+          .dropdown:hover .dropdown-content {
+            display: block;
+          }
+     </style>
+
+    </head>
+    <body>
+         
+      <head>
+        <title>CV Bank</title>
+        <style>
+          .header {
+            background-color: #dadada;
+            color: rgb(255, 255, 255);
+            padding: 20px;
+          }
+          .logo {
+            font-size: 25px;
+          }
+          .menu {
+            float: right;
+          }
+          .menu a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            margin: 0 10px;
+          }
+        </style>
+      </head>
+      <body>
+      
+      <div class="header">
+        <div class="logo"></div>
+        <img src="imgcv.png" alt="" srcset=""
+        height="150"
+        width="150">
+        <div class="menu">
+          <h3>
+          <a href="areainicial.html">Ínicio |</a>
+          <a href="contato.html">Contato |</a>
+          <a href="politicas.htm">Privacidade</a>
+          </h3>
+        </div>
+        <div style="background: linear-gradient(to right, red, black,red); height: 5px"></div>
+      </div>
+      
+      </body>
+        <h2> CV Bank </h2>
+        <form>
+            <b>Nome Completo:</b>
+            <input type="text" name="nome" placeholder="Digite seu nome:"><br><br>
+            <b>Email:</b>
+            <input type="text" email="email" placeholder="Digite seu email:"><br><br>
+            <b>Data de Nascimento:</b> <input type="date" name="nascimento" min="1950-01-01" max="2020-12-31" placeholder="escolha sua data de nascimento">
+            <br><br/>
+            <b>Número de Celular:</b>
+             <input type="number" name="celular" placeholder="(DDD)#####-####">
+             <br><br/>
+            <b>Senha:</b> <input type="password " name="senha" placeholder="Digite sua senha:"> 
+            <br/><br>
+            <b>Confirmação de Senha:</b>
+             <input type="password" name="confirmação" placeholder="Confirme sua senha:"> 
+             <br><br/>
+             <form>
+                <b>Selecione seu Estado:</b>
+                <select name="estado">
+                    <option value="MG">Minas Gerais</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="BA">Bahia</option>
+                </select>
+             </form>
+             <b>Selecione sua Renda Mensal:</b>
+             <select name="rendas">
+                <option value="0 até 1000">0 até 1000</option>
+                <option value="1000 até 2000">1000 até 2000</option>
+                <option value="2000 até 3000">2000 até 3000</option>
+                <option value="acima de 3000">acima de 3000</option>
+             </select>
+            <h3>Deixe seu comentário:</h3>
+            <textarea cols="30" rows="5"></textarea>
+            <input type="submit" value="Enviar">
+        </form>
+        </p>
+    </body>
+</html>

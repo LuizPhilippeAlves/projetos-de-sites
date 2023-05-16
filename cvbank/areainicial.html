@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CV Bank</title>
+  <style>
+    .header {
+      background-color: #dadada;
+      color: rgb(255, 255, 255);
+      padding: 20px;
+    }
+    .logo {
+      font-size: 25px;
+    }
+    .menu {
+      float: right;
+    }
+    .menu a {
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .carousel {
+      width: 100%;
+      height: 400px;
+      position: relative;
+      overflow: hidden;
+    }
+    .carousel img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .carousel img.active {
+      opacity: 1;
+    }
+    .carousel .prev,
+    .carousel .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 50px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 24px;
+      text-align: center;
+      line-height: 50px;
+      cursor: pointer;
+    }
+    .carousel .prev {
+      left: 10px;
+    }
+    .carousel .next {
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="logo"></div>
+  <img src="imgcv.png" alt="" srcset=""
+  height="150"
+  width="150">
+  <div class="menu">
+    <h3>
+    <a href="cv2.html">Cadastro |</a>
+    <a href="contato.html">Contato |</a>
+    <a href="politicas.htm">Privacidade</a>
+    </h3>
+  </div>
+  <div style="background: linear-gradient(to right, red, black,red); height: 5px"></div>
+</div>
+<div class="carousel">
+  <img src="credito.png" alt="Imagem 1" class="active">
+  <img src="Segurança.png" alt="Imagem 2">
+  <img src="sejacv.png" alt="Imagem 3">
+  <img src="vem.png" alt="Imagem 4">
+  <div class="prev">&lt;</div>
+  <div class="next">&gt;</div>
+</div>
+<script>
+  const images = document.querySelectorAll('.carousel img');
+  const prevButton = document.querySelector('.carousel .prev');
+  const nextButton = document.querySelector('.carousel .next');
+  let index = 0;
+  const changeImage = () => {
+    images.forEach(img => img.classList.remove('active'));
+    images[index].classList.add('active');
+  };
+  const prevImage = () => {
+    index--;
+    if (index < 0) {
+      index = images.length - 1;
+    }
+    changeImage();
+  };
+  const nextImage = () => {
+    index++;
+    if (index >= images.length) {
+      index = 0;
+    }
+    changeImage();
+  };
+  prevButton.addEventListener('click', prevImage);
+  nextButton.addEventListener('click', nextImage);
+  setInterval(nextImage, 5000);
+</script>
+
+</body>
+</html>

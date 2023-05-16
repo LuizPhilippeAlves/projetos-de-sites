@@ -1,0 +1,68 @@
+<html>
+    <body>
+        <style>
+/* style.css */
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  #menu-btn {
+    display: block;
+    margin: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #menu {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    padding: 10px;
+    top: 60px;
+    left: 0;
+  }
+  
+  #menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #menu ul li {
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  
+        </style>
+        <button id="menu-btn">Menu</button>
+  
+        
+          <ul>
+            <li><a href="#">Opção 1</a></li>
+            <li><a href="#">Opção 2</a></li>
+            <li><a href="#">Opção 3</a></li>
+          </ul>
+        
+            
+          
+       </head>
+       <script>
+        // script.js
+document.addEventListener('DOMContentLoaded', function() {
+    var menuBtn = document.getElementById('menu-btn');
+    var menu = document.getElementById('menu');
+    
+    menuBtn.addEventListener('click', function() {
+      menu.classList.toggle('show');
+    });
+  });
+  
+        </script>
+    </body>
+</html>
