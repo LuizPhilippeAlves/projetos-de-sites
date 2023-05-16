@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <html lang="pt-br">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width,initial-scale=1.0">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <body>
+   
+    </body>
+
+<form id="cadastro">
+    <label for="passaporte">Número do Passaporte:</label>
+    <input type="text" id="passaporte" name="passaporte" required>
+  
+    <label for="nome">Nome Completo:</label>
+    <input type="text" id="nome" name="nome" required>
+  
+    <label for="cpf">CPF:</label>
+    <input type="text" id="cpf" name="cpf" required>
+  
+    <label for="celular">Celular:</label>
+    <input type="tel" id="celular" name="celular" required>
+  
+    <button type="submit">Cadastrar</button>
+  </form>
+  <script>
+    const cadastroForm = document.querySelector("#cadastro");
+const submitButton = cadastroForm.querySelector("button[type='submit']");
+
+cadastroForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  // Validação do formulário
+  const passaporteInput = cadastroForm.querySelector("#passaporte");
+  const nomeInput = cadastroForm.querySelector("#nome");
+  const cpfInput = cadastroForm.querySelector("#cpf");
+  const celularInput = cadastroForm.querySelector("#celular");
+
+  if (!passaporteInput.value || !nomeInput.value || !cpfInput.value || !celularInput.value) {
+    alert("Preencha todos os campos.");
+    return;
+  }
+
+  // Confirmação de duas etapas
+  const confirmacao = confirm("Deseja confirmar o cadastro?");
+
+  if (confirmacao) {
+    // Envio do formulário
+    alert("Cadastro realizado com sucesso!");
+    cadastroForm.reset();
+  }
+});
+
+cadastroForm.addEventListener("change", () => {
+  // Desabilita o botão de envio se algum campo estiver vazio
+  const passaporteInput = cadastroForm.querySelector("#passaporte");
+  const nomeInput = cadastroForm.querySelector("#nome");
+  const cpfInput = cadastroForm.querySelector("#cpf");
+  const celularInput = cadastroForm.querySelector("#celular");
+
+  if (!passaporteInput.value || !nomeInput.value || !cpfInput.value || !celularInput.value) {
+    submitButton.disabled = true;
+    submitButton.classList.add("button-disabled");
+  } else {
+    submitButton.disabled = false;
+    submitButton.classList.remove("button-disabled");
+  }
+});
+
+  </script>
+  </head>
+  </html>

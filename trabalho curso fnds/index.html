@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <html lang="pt-br">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width,initial-scale=1.0">
+<head>
+	<title>aviação.com</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<body>
+		<nav class="menu-dropdown">
+		  <ul class="menu-dropdown__lista">
+			<li><a href="#">voos</a>
+				<ul class="submenu">
+					<li><a href="#">voos locais</a></li>
+					<li><a href="#">voos internacionais</a></li>
+				</ul>
+			</li>
+			<li><a href="#">planos</a>
+				<ul class="submenu">
+					<li><a href="#">planos comerciais</a></li>
+					<li><a href="#">planos privativos</a></li>
+			  </ul>
+			</li>
+			<li><a href="https://www.maxmilhas.com.br/?gclid=Cj0KCQjwr82iBhCuARIsAO0EAZyWBWL1ryixy3WM5PsMCzJq_8Lm0r3GsZ1skEfRJgo4EIzewqktjMIaAucpEALw_wcB">saiba mais</a></li>
+      <li><a href="cadastro.html">cadastro</a></li>
+    </ul>
+  </li>
+		</nav>
+	</header>
+	<script>
+		function clickmenu(){
+            if(itens.style.display == 'block'){
+				itens.style.display = 'none'
+			} else{
+				itens.style.display = 'block'
+			}
+		}
+	</script>
+	<div class="imagem-container">
+		<img src="img/1.png">
+	</div>
+	<main>
+		<section class="banner">
+			<h2>aviação compania</h2>
+			<h3>Viaje para todo o mundo</h3>
+			<h5>123 aeroporto avante</h6>
+			<h5>Los Angeles, DC, Rio de Janeiro</h6>
+		</section>
+    </main>
+			<body>
+				<div class="container">
+					<div class="box">
+						<img src="img/fly1.jpg" alt="Plane 1"
+            height="150px"
+            width="150px">
+					</div>
+					<div class="box">
+						<img src="img/fly2.jpg" alt="Plane 2"
+            height="150px"
+            width="150px">
+					</div>
+					<div class="box">
+						<img src="img/fly3.jpg" alt="Plane 3"
+            height="150px"
+            width="150px">
+					</div>
+					<div class="box">
+						<img src="img/fly4.jpg" alt="Plane 4"
+            height="150px"
+            width="150px">
+					</div>
+					<div class="box">
+						<img src="img/fly5.jpg" alt="Plane 5"
+            height="150px"
+            width="150px">
+					</div>
+					<div class="box">
+						<img src="img/fly6.jpg" alt="Plane 6"
+            height="150px"
+            width="150px">
+					</div>
+				</div>
+	<title>Simulação de Voo</title>
+	<h1>Simulação de Voo</h1>
+
+	<div class="concria">
+		<p>Horário de partida: <span id="horario-partida"></span></p>
+		<button onclick="iniciarVoo()">Iniciar Voo</button>
+		<div class="timer" id="tempo-decorrido"></div>
+	</div>
+
+	<script>
+		function iniciarVoo() {
+			var horarioPartida = new Date();
+			document.getElementById("horario-partida").innerHTML = horarioPartida.toLocaleString();
+			setInterval(function() {
+				var tempoDecorrido = new Date() - horarioPartida;
+				var minutos = Math.floor(tempoDecorrido / 60000);
+				var segundos = Math.floor((tempoDecorrido % 60000) / 1000);
+				document.getElementById("tempo-decorrido").innerHTML = minutos + ":" + segundos;
+			}, 1000);
+		}
+	</script>
+	</head>
+</body>
+</html>
